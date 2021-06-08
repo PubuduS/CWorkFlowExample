@@ -1,7 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 
-# set the project name
-project(Tutorial)
+project(main)
 
-# add the executable
-add_executable(Tutorial HelloWorld.cpp)
+add_executable(main main.cpp)
+
+install(TARGETS main)
+
+enable_testing()
+add_test(NAME main COMMAND main)
